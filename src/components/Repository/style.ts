@@ -30,7 +30,9 @@ export const RepositoryWrapper = styled.ul`
 
   .repo-desc {
     font-size: 1.125rem;
+    font-family: 'Roboto';
     width: 280px;
+    height: 50px;
     margin: 20px 0 0 40px;
   }
 

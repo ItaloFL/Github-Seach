@@ -20,6 +20,10 @@ export const ProfileWrapper = styled.div`
     font-weight: 700;
     color: #8752CC;
   }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `
 
 
@@ -60,7 +64,9 @@ export const RepositoryWrapper = styled.div`
     justify-content: center;
     margin-top: 20px;
     p {
-      margin-left: 4px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-left: 10px;
     }
   }
 
