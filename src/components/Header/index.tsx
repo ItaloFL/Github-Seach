@@ -1,18 +1,13 @@
-import logoImg from '../../assets/mobile-github-logo.svg';
-import setaImg from '../../assets/icons/seta.svg';
-import { HeaderContainer } from './style';
-import App from '../../App';
+import logoImg from '../../assets/mobile-github-logo.svg'
+import { HeaderContainer, Seta } from './style'
 
-export function Header(){
+export function Header() {
   return (
     <>
-      <HeaderContainer >
-          <img src={logoImg} alt="" />
-          <img className='toHome' src={setaImg} alt="" onClick={() => {
-           
-          }}/>
+      <HeaderContainer>
+        <img src={logoImg} alt="" />
+        <Seta />
       </HeaderContainer>
     </>
-  
   )
 }
