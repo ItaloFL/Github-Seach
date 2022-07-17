@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react'
 import { RepositoryWrapper } from './style'
-import startIcon from '../../assets/icons/star-icon.svg'
 import forkIcon from '../../assets/icons/fork-icon.svg'
-import languageIcon from '../../assets/icons/linguage-icon.svg'
+import { File, GitFork, Star } from 'phosphor-react'
 
 type RepositoryProps = {
-  key: number
+  id: number
   name: string
   description: string
   forks_count: number
@@ -24,31 +23,29 @@ export function Repository() {
 
   const [repositoryData, setRepositoryData] = useState<RepositoryProps[]>([])
 
-  console.log(repositoryData, setRepositoryData)
-
   return (
     <>
       <RepositoryWrapper>
         {repositoryData.map(repo => {
           return (
-            <li className="repo-wrapper" key={repo.key}>
+            <li className="repo-wrapper" key={repo.id}>
               <p className="repo-titulo">{repo.name}</p>
               <p className="repo-desc">{repo.description}</p>
 
               <div className="repo-infos">
                 <ul>
-                  <li>
-                    <img src={startIcon} alt="" />
+                  <p>
+                    <Star size={19} color="#8752CC" weight="fill" />
                     {repo.stargazers_count}
-                  </li>
-                  <li>
-                    <img src={forkIcon} alt="" />
+                  </p>
+                  <p>
+                    <GitFork size={21} color="#8752CC" weight="fill" />
                     {repo.forks_count}
-                  </li>
-                  <li>
-                    <img src={languageIcon} alt="" />
+                  </p>
+                  <p>
+                    <File size={19} color="#8752CC" weight="fill" />
                     {repo.language}
-                  </li>
+                  </p>
                 </ul>
               </div>
             </li>

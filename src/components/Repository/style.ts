@@ -18,6 +18,7 @@ export const RepositoryWrapper = styled.ul`
     height: 200px;
     background-color: #201F1F;
     color: #B3B3B3;
+    border-radius: 4px;
   }
 
   .repo-titulo {
@@ -45,7 +46,7 @@ export const RepositoryWrapper = styled.ul`
       margin-top: 50px;
     }
 
-    li {
+    p {
       display: flex;
       gap: 10px;
       align-items: center;
