@@ -4,6 +4,7 @@ import companyIcon from '../../assets/icons/ic_sharp-home-work.svg'
 import followersIcon from '../../assets/icons/people-team-icon.svg'
 import followingIcon from '../../assets/icons/people-team-icon-roxo.svg'
 import repositoryIcon from '../../assets/icons/repositories-icon.svg'
+import { MapPin, UsersThree } from 'phosphor-react'
 
 type ProfileProps = {
   name: string
@@ -36,31 +37,31 @@ export function Profile({
           <div className="data-user">
             <p className="name-user">{name}</p>
             <p>@{login}</p>
-            
-              <InfoWrapper>
-                <li>
-                  <img src={locationIcon} alt="" />
-                  {location}
-                </li>
-                <li>
-                  <img src={companyIcon} alt="" />
-                  {company}
-                </li>
-                <li>
-                  <img src={followersIcon} alt="" />
-                  {followers}
-                </li>
-                <li>
-                  <img src={followingIcon} alt="" />
-                  {following}
-                </li>
+
+            <InfoWrapper>
+              <p>
+                <MapPin size={19} color="#8752CC" weight="fill" />
+                {location}
+              </p>
+              <p>
+                <img src={companyIcon} alt="" />
+                {company}
+              </p>
+              <p>
+                <UsersThree size={19} color="#8752CC" />
+                {followers}
+              </p>
+              <p>
+                <UsersThree size={19} color="#8752CC" weight="fill" />
+                {following}
+              </p>
             </InfoWrapper>
           </div>
 
           <RepositoryWrapper>
             <div>
-              <p className='titulo-repo'>Total Repositorios</p>
-              <div className='repository'>
+              <p className="titulo-repo">Total Repositorios</p>
+              <div className="repository">
                 <img src={repositoryIcon} alt="" />
                 <p>{public_repos}</p>
               </div>

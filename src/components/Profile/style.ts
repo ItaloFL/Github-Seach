@@ -31,14 +31,16 @@ export const InfoWrapper = styled.ul`
   display: flex;
   align-items: center;
   text-align: center;
+  flex: 1;
 
-  li {
+  p {
     display: flex;
     margin-top: 20px;
     margin-left: 10px;
     list-style: none;
     align-items: center;
     text-align: center;
+    gap: 3px;
   }
   
 
